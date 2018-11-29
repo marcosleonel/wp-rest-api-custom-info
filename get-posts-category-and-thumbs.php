@@ -20,13 +20,12 @@ function custom_endpoint ( $data ) {
    $title = '';
    
    foreach ( $posts as $post ) {
-       
      //Get informations that is not avaible in get_post() function and store it in variables.
-	   $category = get_the_category( $post->ID );
-	   $img_thumb = get_the_post_thumbnail_url( $post->ID, 'thumbnail' );       // Thumbnail (default 150px x 150px max)
-     $img_medium = get_the_post_thumbnail_url( $post->ID, 'medium' );          // Medium resolution (default 300px x 300px max)
-     $img_large = get_the_post_thumbnail_url( $post->ID, 'large' );           // Large resolution (default 640px x 640px max)
-     $img_full = get_the_post_thumbnail_url( $post->ID, 'full' );            // Full resolution (original size uploaded)
+     $category = get_the_category( $post->ID );
+     $img_thumb = get_the_post_thumbnail_url( $post->ID, 'thumbnail' ); // Thumbnail (default 150px x 150px max)
+     $img_medium = get_the_post_thumbnail_url( $post->ID, 'medium' );  // Medium resolution (default 300px x 300px max)
+     $img_large = get_the_post_thumbnail_url( $post->ID, 'large' ); // Large resolution (default 640px x 640px max)
+     $img_full = get_the_post_thumbnail_url( $post->ID, 'full' ); // Full resolution (original size uploaded)
   
      //Adds the informations to the post object.
 	   $post->category = $category; 
