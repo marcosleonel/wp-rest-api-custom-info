@@ -1,3 +1,4 @@
+<?php
 /**
  * Make a Wordpress Custom Endpoint adding information in the get_post() objecct
  *
@@ -47,3 +48,4 @@ add_action( 'rest_api_init', function () {
 		'callback' => 'custom_endpoint',
 	) );
 } );
+?>
